@@ -49,16 +49,45 @@ public class functions{
 
     }
 
-    // CREATING A FUNCTION TO CHECK N IS PRIME OR NOT
-       public static boolean prime(int n){  
-        for(int i=2;i<=n;i++){
-            if(n%i==0){
-                System.out.println("The no. is not prime");
-            }
-            else{System.out.println("the no. is prime");
+    // CREATING A FUNCTION TO CHECK N IS PRIME OR NOT (optimized)
+    public static boolean checkprime(int n){
+        if (n==2) {
+            return true;
         }
+        for(int i=2;i<=Math.sqrt(n);i++){
+            if(n%i==0){
+                return false;
+            }
+        }
+        return true;
+    }
+  
+    //Print all prime in range \
+    public static void PrimeIR(int n){
+        for (int i=2;i<=n;i++){
+            
+            if (checkprime(i)){
+                System.out.print(i+" ");
+            }
+        }
+        System.out.println();  
+    }
 
-        }}
+    // Creating a function to convert a binary number to decimal
+    public static void bin2dec(int binNum){
+        int mynum=binNum;
+        int pow=0;
+        int decNum=0;
+
+        while (binNum>0){
+            int LD= binNum % 10;
+            decNum = decNum + ( LD * (int)Math.pow(2,pow));
+
+            pow++;
+            binNum = binNum/10;
+        }
+        System.out.println("decimal of "+mynum+"="+decNum);
+    }
 
  
 
@@ -97,7 +126,18 @@ public class functions{
         // System.out.println(bincoff(10,5));
 
         // calling a function prime
-        prime(5);
+        // System.out.println(checkprime(2));
+        
+
+        /// calling a function to cgeck prime in range
+        // PrimeIR(200);
+
+        //calling a function to convert a binary number to decimal number
+        System.out.println("Enter a binary no. you want to convert to decimal");
+        int n=sc.nextInt();
+        bin2dec(n);
+
+       
 
 
     
