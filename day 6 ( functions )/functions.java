@@ -89,6 +89,21 @@ public class functions{
         System.out.println("decimal of "+mynum+"="+decNum);
     }
 
+    // creating a function to convert a decimal number to a binary number
+    public static void dec2bin(int n){
+        int mynum=n;
+        int pow = 0;
+        int binnum =0;
+        while(n>0){
+            int rem = n%2;
+            binnum = binnum + (rem*(int)Math.pow(10,pow));
+            pow++;
+            n=n/2;
+        }
+        System.out.println("Binary form of"+mynum+"="+binnum);
+
+    }
+
  
 
     public static void main(String[] args) {
@@ -133,14 +148,49 @@ public class functions{
         // PrimeIR(200);
 
         //calling a function to convert a binary number to decimal number
-        System.out.println("Enter a binary no. you want to convert to decimal");
-        int n=sc.nextInt();
-        bin2dec(n);
+        // System.out.println("Enter a binary no. you want to convert to decimal");
+        // int n=sc.nextInt();
+        // bin2dec(n);
 
-       
+        //calling a function to convert a decimal number to binary decimal
+        // dec2bin(12);
 
+        // Block Scope:
+        //     Variables declared within a block of code, which is defined by curly braces { }, have block scope.
+        //     This includes variables declared inside methods, if statements, for loops, while loops, and any other code enclosed by curly braces.
+        //     A block-scoped variable is only accessible from the point of its declaration until the end of its enclosing block.
+        //     Attempting to access a block-scoped variable outside its block will result in a compile-time error.
 
+        //     public class block_scope_Example {
+        //     public static void main(String[] args) {
+        //     int x = 10; // x has scope within the main method
+        //     if (x > 5) {
+        //         int y = 20; // y has block scope within this if statement
+        //         System.out.println(y); // Accessible
+        //     }
+        //     // System.out.println(y); // Error: y is out of scope
+        // }}
+
+        // Class Scope (Instance and Static Variables):
+        // Variables declared directly within a class, but outside of any method or block, have class scope.
+        // These are broadly categorized into instance variables (non-static) and static variables (class variables).
+        // Instance variables: belong to specific objects (instances) of the class and are accessible within all non-static methods and blocks of that object. Their lifetime is tied to the object's existence.
+        // Static variables: belong to the class itself, not to any particular object. They are shared among all instances of the class and are accessible within all methods and blocks of the class (both static and non-static). Their lifetime persists as long as the class is loaded in memory. 
     
+        //         public class MyClass {
+        //     int instanceVar = 5; // Instance variable, class scope
+        //     static int staticVar = 10; // Static variable, class scope
+
+        //     public void myMethod() {
+        //         System.out.println(instanceVar); // Accessible
+        //         System.out.println(staticVar); // Accessible
+        //     }
+
+        //     public static void main(String[] args) {
+        //         MyClass obj = new MyClass();
+        //         System.out.println(obj.instanceVar); // Accessible via object
+        //         System.out.println(MyClass.staticVar); // Accessible via class name
+        //     }}
 
     }
 }
