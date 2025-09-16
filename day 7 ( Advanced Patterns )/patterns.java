@@ -79,6 +79,6 @@ import java.util.*;
 
             //calling a function to print floyds trainagle pattern
             // floyd_pattern(5);
-            // // // //
+            // // // // // // //
         }
     }
