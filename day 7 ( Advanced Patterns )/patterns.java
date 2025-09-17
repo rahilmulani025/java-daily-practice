@@ -59,6 +59,64 @@ import java.util.*;
             System.out.println();
             }}
 
+            // function to print 0-1 triangle
+            public static void zero1triangle(int n){
+                for(int i=1;i<=n;i++){
+                    for(int j=1;j<=i;j++){
+                        if((i+j)%2==0){
+                            System.out.print("1");
+                        }
+                        else{
+                            System.out.print("0");
+                        }
+                    }
+                    System.out.println();
+                }
+            }
+
+        
+            // CREATING A FUNCTON TO PRINT BUTTERFLY PATTERN
+              public static void butterfly(int n){
+                //1st half
+                for(int i=1; i<=n ;i++){
+                    // stars = i
+                    for(int j=1;j<=i;j++){
+                        System.out.print("*");
+                    }
+
+                    //spaces = 2*(n-1)
+                    for(int j=1;j<=2*(n-i);j++){
+                        System.out.print(" ");
+                    }
+
+                    //stars =i
+                     for(int j=1;j<=i;j++){
+                        System.out.print("*");
+                    }
+                    System.out.println();
+
+                }
+
+                //2nd half
+                for(int i=n;i>=1;i--){
+                     // stars = i
+                    for(int j=1;j<=i;j++){
+                        System.out.print("*");
+                    }
+
+                    //spaces = 2*(n-1)
+                    for(int j=1;j<=2*(n-i);j++){
+                        System.out.print(" ");
+                    }
+
+                    //stars =i
+                     for(int j=1;j<=i;j++){
+                        System.out.print("*");
+                    }
+                    System.out.println();
+
+                }
+              }
 
 
         public static void main(String[] args) {
@@ -79,6 +137,13 @@ import java.util.*;
 
             //calling a function to print floyds trainagle pattern
             // floyd_pattern(5);
-            // // // // // // //
+            // // // //
+
+            //0-1 triangle
+            // zero1triangle(5);
+
+            //butterfly pattern
+            // butterfly(4);
+             
         }
     }
