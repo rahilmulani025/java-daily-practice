@@ -118,6 +118,65 @@ import java.util.*;
                 }
               }
 
+              // SOLID ROMBUS
+              public static void rhombus(int n){
+            for (int i=1;i<=n;i++){
+                for(int j=1;j<=n-i;j++){
+                    System.out.print(" ");
+                }
+                for(int j=1;j<=n;j++){
+                    System.out.print("*");
+                }
+                System.out.println();
+            }}
+
+            // hollow rombus ( tilted hollow rectrangle )
+              public static void hollow_rhombus(int n){
+                for(int i=1;i<=n;i++){
+                    //spaces
+                    for(int j=1;j<=(n-i);j++){
+                        System.out.print(" ");
+                    }
+                    // hollow rectrangle - stars
+                    for(int j=1;j<=n;j++){
+                        if(i==1 || i==n || j==1 || j==n){
+                            System.out.print("*");
+                        }
+                        else{
+                            System.out.print(" ");
+                        }
+                    }
+                    System.err.println();
+                }
+              }
+
+
+        // Diamond pattern
+        public static void diamond(int n){
+            // First half
+            for (int i=1;i<=n;i++){
+                for(int j=1;j<=n-i;j++){
+                    System.out.print(" ");
+                }
+                for(int j=1;j<=(2*i)-1;j++){
+                    System.out.print("*");
+                }
+                System.out.println();
+            }
+            // Second half
+            for (int i=n-1;i>=1;i--){
+                for(int j=1;j<=n-i;j++){
+                    System.out.print(" ");
+                }
+                for(int j=1;j<=(2*i)-1;j++){
+                    System.out.print("*");
+                }
+                System.out.println();
+            }
+        }
+       
+
+
 
         public static void main(String[] args) {
             Scanner sc=new Scanner(System.in);
@@ -145,5 +204,13 @@ import java.util.*;
             //butterfly pattern
             // butterfly(4);
              
-        }
+           // solid rhombus pattern 
+           // rhombus(5);
+
+           // hollow rombus
+           //  hollow_rhombus(6);
+
+           // diamond pattern
+        //    diamond(5);
+        } 
     }
