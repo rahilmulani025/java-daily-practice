@@ -8,8 +8,9 @@ public class arrays{
 
             Scanner sc=new Scanner(System.in); }}
 
-// start from here ///
+//////// start from here ///////
 // using the function max subarray's sum
+
 
 
 
