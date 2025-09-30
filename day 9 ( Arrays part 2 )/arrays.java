@@ -1,6 +1,6 @@
 import java.util.*;
 
-/////
+//////////
 
 // function to print max subarray sum
 public class arrays{
@@ -10,6 +10,7 @@ public class arrays{
 
 //////// start from here ///////
 // using the function max subarray's sum
+
 
 
 
